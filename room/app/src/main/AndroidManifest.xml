@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.designapptest">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".view.room.RequestBookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.room.ListBookRoomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.popup.PopUpActivity"
+            android:theme="@style/AppTheme.PopMe" />
+        <activity
+            android:name=".view.popup.PopUpCommentActivity"
+            android:theme="@style/AppTheme.PopMe" />
+        <activity android:name=".view.main.MainMenuActivity" />
+
+        <meta-data
+            android:name="INTENT_NAME"
+            android:value="com.example.designapptest" />
+
+        <activity
+            android:name=".view.searchandmap.LocationSearchActivity"
+            android:noHistory="true" />
+        <activity android:name=".view.searchandmap.SearchViewActivity" />
+        <activity android:name=".view.room.LoadImageScreenActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" /> <!-- End thêm meta data cho google map -->
+        <activity android:name=".view.commentandrate.CommentAndRateMainActivity" />
+        <activity android:name=".view.room.RoomManageActivity" />
+        <activity android:name=".view.room.DetailRoomActivity" />
+        <activity android:name=".view.room.FavoriteRoomsActivity" />
+        <activity android:name=".view.room.VerifiedRoomsViewActivity" />
+        <activity android:name=".view.room.PostRoomActivity" />
+        <activity android:name=".view.postroom.PostRoomAdapterUpdateActivity" />
+        <activity
+            android:name=".view.login.LoginActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme1.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.register.RegisterActivity"
+            android:theme="@style/AppTheme1.NoActionBar" />
+        <activity android:name=".view.room.FindRoomAddActivity" />
+        <activity android:name=".view.room.FindRoomDetailActivity" />
+        <activity android:name=".view.room.FindRoomFilterActivity" />
+        <activity android:name=".view.room.FindRoomMineActivity" />
+        <activity android:name=".view.account.PersonalActivity" />
+        <activity android:name=".view.account.ResetPasswordByEmailActivity" />
+        <activity android:name=".view.admin.AdminViewActivity" />
+        <activity android:name=".view.admin.AdminRoomsActivity" />
+        <activity android:name=".view.admin.AdminHostsActivity" />
+        <activity android:name=".view.admin.AdminHostRoomsActivity" />
+        <activity android:name=".view.admin.AdminRoomsWaitForApprovalActivity" />
+        <activity android:name=".view.admin.AdminReportRoomActivity" />
+        <activity android:name=".view.admin.AdminReportRoomDetailActivity" />
+        <activity android:name=".view.main.FindRoomMine" />
+        <activity android:name=".view.room.FindRoomAdd" />
+        <activity android:name=".view.room.FindRoomFilter" />
+    </application>
+
+</manifest>
